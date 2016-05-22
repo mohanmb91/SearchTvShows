@@ -1,0 +1,22 @@
+		<div class="col-xs-12" ng-repeat="eachSearchResult in data">
+			<div class="panel panel-primary">
+				<div class="row">
+					<div class="col-md-3">
+					<img ng-src="{{eachSearchResult.show.image.medium ? eachSearchResult.show.image.medium : './images/no-img-portrait-text.png'}}" alt="Description" />
+					</div>
+					<div class="col-md-8">
+						<h2>{{eachSearchResult.show.name}}</h2>
+						<!-- <div class="row">						      -->
+						<h6>
+							<span ng-repeat="eachGenres in eachSearchResult.show.genres">{{eachGenres}} </span>
+						</h6>						
+						<!-- </div> -->
+						<h5>
+						<p ng-bind-html = "eachSearchResult.show.summary != '' ? eachSearchResult.show.summary : 'Summary not available' | trustHTML"></p>						
+						</h5>
+						<!-- <button class="btn" ng-href="/shows/{{eachSearchResult.show.id}}">Get Details</button> -->
+						<a href = "/show/{{eachSearchResult.show.id}}" class = "btn btn-warning">Details</a>
+					</div>
+				</div>
+			</div>
+		</div>

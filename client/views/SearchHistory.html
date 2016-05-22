@@ -1,0 +1,15 @@
+<div class="jumbotron text-left">
+	<h2>History for the searches made on this browser:</h2>
+		<div class="text-left" ng-repeat="eachSearchHistoryResult in allHistory">
+		<a href="/?searchtxt={{eachSearchHistoryResult.text}}">{{eachSearchHistoryResult.text}}</a>
+		</div>
+		<div class="row" ng-if="resultNoFound == true">
+			<div class="panel panel-primary">
+				<div class="row">
+					<div class="col-md-8">
+						<h2>No history recorded till now</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>

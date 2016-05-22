@@ -1,0 +1,25 @@
+<div class="jumbotron text-left">
+	<h2>Search Tv shows here:</h2>
+	<form>
+		
+		<div class="input-group">		  
+		  <input type="text" class="form-control" placeholder="search your tv shows" ng-model="searchText" typeahead-on-select="getTvShows()" uib-typeahead="eachHistory.text for eachHistory in allHistory | filter:$viewValue">
+		  <span class="input-group-btn">
+		    <button class="btn btn-default" type="button" ng-click="getTvShows();addAllHistory();">Search</button>
+		  </span>
+		</div>
+		
+	</form>
+	<div class="row">
+	<div search-result data = "searchResult"> </div>
+	<div class="col-xs-12" ng-if="resultNotFound == true">
+			<div class="panel panel-primary">
+				<div class="row">
+					<div class="col-md-8">
+						<h2>No search Results Found</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

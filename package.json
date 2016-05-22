@@ -1,0 +1,16 @@
+{
+  "name": "projex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mohan",
+  "license": "ISC",
+  "dependencies": {
+    "angular-uuid": "0.0.2",
+    "express": "^4.13.3",
+    "superagent": "^1.4.0"
+  }
+}
